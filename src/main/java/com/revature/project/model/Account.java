@@ -8,24 +8,23 @@ public class Account {
 	private String id; //Account ID
 	private double balance; //Account Balance
 	private AccountType accountType; //Account Type
-	private List<Transaction> transactions; //Transaction History
+	//private List<Transaction> transactions; //Transaction History
 	
-	public Account(Customer customer, String id, double balance, AccountType accountType,
-			List<Transaction> transactions) {
+	public Account(Customer customer, String id, double balance, AccountType accountType) {
 		super();
 		this.customer = customer;
 		this.id = id;
 		this.balance = balance;
 		this.accountType = accountType;
-		this.transactions = transactions;
+		//this.transactions = transactions;
 	}
 	
 	
 
 	@Override
 	public String toString() {
-		return "Account [customer=" + customer + ", id=" + id + ", balance=" + balance + ", accountType=" + accountType
-				+ ", transactions=" + transactions + "]";
+		return "Account [customer=" + customer + ", id=" + id + ", balance=" + balance + ", accountType=" + accountType/*
+				+ ", transactions=" + transactions + */;
 	}
 
 
@@ -57,15 +56,5 @@ public class Account {
 	public void setAccountType(AccountType accountType) {
 		this.accountType = accountType;
 	}
-
-	public List<Transaction> getTransactions() {
-		return transactions;
-	}
-
-	public void setTransactions(List<Transaction> transactions) {
-		this.transactions = transactions;
-	}
-
-	
 	
 }
